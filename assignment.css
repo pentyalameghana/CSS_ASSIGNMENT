@@ -1,0 +1,120 @@
+/* 1. Attribute selector */
+/* Selects inputs whose type contains "mail" */
+
+input[type*="mail"] {
+    background-color: lightyellow;
+}
+
+
+/* 2. nth-child(odd) */
+/* Selects odd-numbered product articles */
+
+.product:nth-child(odd) {
+    background-color: lightblue;
+}
+
+
+/* 3. nth-of-type(3n) */
+/* Selects every third li */
+
+.features li:nth-of-type(3n) {
+    background-color: lightgreen;
+}
+
+
+/* 4. :not() + :focus */
+/* Focus effect for controls except disabled controls */
+
+input:not([disabled]):focus,
+textarea:not([disabled]):focus {
+    outline: 3px solid blue;
+    background-color: white;
+}
+
+
+/* 5. Descendant selector */
+/* Selects h2 elements inside .products */
+
+.products h2 {
+    font-weight: bold;
+}
+
+
+/* 6. ::first-letter */
+/* Makes first letter of first paragraph bigger */
+
+.product p:first-of-type::first-letter {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/* 7. Adjacent sibling selector */
+/* Selects article immediately after featured article */
+
+article.featured + article {
+    border-left: 5px solid red;
+}
+
+
+/* 8. Child selector + hover */
+/* Selects only direct child links of nav */
+
+nav > a:hover {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+
+/* Extra styling */
+
+nav {
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.product {
+    padding: 15px;
+    border: 1px solid gray;
+}
+
+.product img {
+    width: 150px;
+    height: 150px;
+}
+
+.product span {
+    font-weight: bold;
+}
+
+.features li {
+    padding: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+}
+
+input,
+textarea {
+    padding: 10px;
+}
+
+textarea {
+    height: 100px;
+}
